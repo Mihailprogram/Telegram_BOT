@@ -7,7 +7,7 @@ import csv
 
 
 
-def VK():
+def VK_():
     url = 'https://vk.com/mijjja1l'
     s = requests.Session()
     s.headers['User-Agent'] = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36'
