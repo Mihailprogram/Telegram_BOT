@@ -5,22 +5,18 @@ import lxml
 from time import sleep
 import csv
 
-# url = 'https://weather.rambler.ru/'
-# response = requests.get(url)
-# soup = BeautifulSoup(response.text, 'lxml')
-# quotes = soup.find_all('div', class_='_1HBR _3mFL')
-# f=soup.find_all('div', class_='Hixd')
-#
-# f1=f[0]
-# s1=''
-# for i in f1:
-#     s1+=i
-# a=quotes[0]
-# s=''
-# for i in a:
-#     s+=i
 
 
+def VK():
+    url = 'https://vk.com/mijjja1l'
+    s = requests.Session()
+    s.headers['User-Agent'] = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36'
+    r = s.get(url)
+
+
+    soup=BeautifulSoup(r.text,"lxml")
+    zapr=soup.find_all(class_="ProfileHeader__info")
+    print(soup)
 def Urfu():
     url='https://urfu.ru/index.php?id=31050'
     s = requests.Session()
@@ -140,7 +136,7 @@ def pars3():
 
 
 def main():
-    Urfu()
+    VK()
 
 if __name__=="__main__":
     main()
